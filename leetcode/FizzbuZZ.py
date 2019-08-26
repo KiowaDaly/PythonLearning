@@ -1,6 +1,8 @@
 class Solution:
     def fizzBuzz(self, n):
         """
+
+        this code is a soltuion on LeetCode -
         :type n: int
         :rtype: List[str]
         """
