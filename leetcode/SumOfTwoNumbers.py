@@ -14,14 +14,13 @@ class Solution:
     # ie a massive number rather than say -20 it was 4294967276 so i added the masks into my own recursion algorithm!
     def getSum(self, a: int, b: int) -> int:
         mask = 0xFFFFFFFF  # SETTING UPPER LIMITS TO AVOID OVERFLOW
-        max = 0x7FFFFFFF
+        MAX_INT = 0x7FFFFFFF
         if b == 0:
-            return a if a <= max else ~(a ^ mask)
+            return a if a <= MAX_INT else ~(a ^ mask)
         else:
-            return self.getSum((a ^ b) & mask, ((a & b) << 1 ) & mask)
+            return self.getSum((a ^ b) & mask, ((a & b) << 1) & mask)
 
-
-# same as recursive solution but iterative intstead
+    # same as recursive solution but iterative intstead
     def getSum(self, a: int, b: int) -> int:
         while a != 0:
             a, b = ((a & b) << 1, (a ^ b))
