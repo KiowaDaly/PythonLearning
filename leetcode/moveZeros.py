@@ -12,7 +12,7 @@ class Solution:
         # loop through each index of nums
         # if value != 0 then we swap the values and increase j
 
-        for i in xrange(len(nums)):
+        for i in range(len(nums)):
             if nums[i] != 0:
                 nums[i], nums[j] = nums[j], nums[i]
                 j += 1
