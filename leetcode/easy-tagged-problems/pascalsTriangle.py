@@ -1,4 +1,5 @@
 from typing import List
+import tkinter
 
 from pip._vendor.webencodings.mklabels import generate
 
